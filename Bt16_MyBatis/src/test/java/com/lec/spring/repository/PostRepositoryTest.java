@@ -25,7 +25,7 @@ class PostRepositoryTest {
         postRepository.findAll().forEach(System.out::println);
 
         Post post = Post.builder()
-                .user("김다현"
+                .user("김다현")
                 .subject("늦게 일어났어요")
                 .content("ㅋㅋ")
                 .build();
