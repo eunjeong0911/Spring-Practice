@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<form th:action="@{regOK}" method="GET"> <!--상대주소--> <!-- form이 제출될때 GET 요청을 '/regOK' URL로 보낸다는 의미-->
+    username: <input type="text" name="username" th:value="GET"/>
+    <input type="submit" th:value="GET요청"/>
+</form>
+<hr>
+<form th:action="@{regOK}" method="POST"> <!--상대주소--> <!---->
+    username: <input type="text" name="username" th:value="POST"/>
+    <input type="submit" th:value="POST요청"/>
+</form>
+
+<hr>
+
+<form th:action="@{regOK2}" method="GET"> <!--상대주소--> <!---->
+    username: <input type="text" name="username" th:value="GET-regOK2"/>
+    <input type="submit" th:value="GET요청"/>
+</form>
+<hr>
+<form th:action="@{regOK2}" method="POST"> <!--상대주소--> <!---->
+    username: <input type="text" name="username" th:value="POST-regOK2"/>
+    <input type="submit" th:value="POST요청"/>
+</form>
+</html>
