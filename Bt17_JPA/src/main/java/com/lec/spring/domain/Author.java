@@ -1,7 +1,10 @@
 package com.lec.spring.domain;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +15,7 @@ import java.util.List;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Entity
-public class Author extends BaseEntity {
+public class Author extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -38,5 +41,7 @@ public class Author extends BaseEntity {
     public void addWritings(Writing... writing) {
         Collections.addAll(this.writings, writing);
     }
+
+
 
 }

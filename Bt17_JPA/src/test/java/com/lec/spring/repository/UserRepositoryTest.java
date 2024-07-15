@@ -10,7 +10,6 @@ import org.junit.jupiter.api.TestInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.*;
-import org.w3c.dom.ls.LSInput;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -548,10 +547,10 @@ class UserRepositoryTest {
         user.setEmail("martin-new@greendragon.com");
         user.setName("martin-new");
 
-        userRepository.save(user); //INSERT
+        userRepository.save(user);  // INSERT
 
         user.setName("U E NA");
-        userRepository.save(user); //UPDATE. User Update전에 UserHistory 에 INSERT 발생
+        userRepository.save(user);   // UPDATE.  User Update 전에 UserHistory 에 INSERT 발생
 
         userHistoryRepository.findAll().forEach(System.out::println);
 
@@ -568,40 +567,38 @@ class UserRepositoryTest {
         user.setEmail("david@reddragon.com");
         user.setGender(Gender.MALE);
 
-        userRepository.save(user);  //Use r에 INSERT, UserHistory 에 INSERT
+        userRepository.save(user);   // User 에 INSERT, UserHistory 에 INSERT.
 
         user.setName("베리냥");
-        userRepository.save(user); //User에 Select + Update, UserHistory에 INSERT.
+        userRepository.save(user);    // User 에 SELECT + UPDATE, UserHistory 에 INSERT.
 
-        System.out.println("♥".repeat(30));
+        System.out.println("😀".repeat(30));
 
         user.setEmail("berry@mail.com");
-        userRepository.save(user);
+        userRepository.save(user);    // User 에 SELECT + UPDATE, UserHistory 에 INSERT.
 
-        //userHistoryRepository.findAll().forEach(System.out::println);
 
-        System.out.println("♡".repeat(30));
-        //특정 userId로 UserHIstory 조회
-        //Long userId = userRepository.findByEmail("berry@mail.com").getId();
-        //List<UserHistory> result = userHistoryRepository.findByUserId(userId);
-        //result.forEach(System.out::println);
+        userHistoryRepository.findAll().forEach(System.out::println);
+
+        System.out.println("🧡".repeat(30));
+
+        // 특정 userId 로 UserHistory 조회
+//        Long userId = userRepository.findByEmail("berry@mail.com").getId();
+//        List<UserHistory> result = userHistoryRepository.findByUserId(userId);
+//        result.forEach(System.out::println);
 
         List<UserHistory> result = userRepository.findByEmail("berry@mail.com").getUserHistories();
-        result.forEach(System.out::println); //LazyInitializationException 발생!
 
-        System.out.println("❤️".repeat(30));
+        result.forEach(System.out::println);  // LazyInitializationException 발생!
+
+        System.out.println("👩".repeat(30));
         System.out.println(userHistoryRepository.findAll().get(0).getUser());
+
+
 
         System.out.println("\n------------------------------------------------------------\n");
     }
 
+
+
 }
-
-
-
-
-
-
-
-
-

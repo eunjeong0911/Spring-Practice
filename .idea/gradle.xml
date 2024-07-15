@@ -38,11 +38,10 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/Bt17_JPA/src/main" />
-        <option name="gradleJvm" value="17" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Bt17_JPA" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/Bt17_JPA/src/main" />
+            <option value="$PROJECT_DIR$/Bt17_JPA" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -51,6 +50,30 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Bt50_Board" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Bt61_JPA_CRUD" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Bt61_JPA_CRUD" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Bt62_JPA_Board" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Bt62_JPA_Board" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Bt63_JPA_Board" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Bt63_JPA_Board" />
           </set>
         </option>
       </GradleProjectSettings>

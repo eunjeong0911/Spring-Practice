@@ -122,14 +122,3 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Map<String, Object> findRowRecord();
 
 }
-
-
-
-
-
-
-
-
-
-
-

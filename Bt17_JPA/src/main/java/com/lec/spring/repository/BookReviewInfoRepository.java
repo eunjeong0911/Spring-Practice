@@ -1,6 +1,5 @@
 package com.lec.spring.repository;
 
-import com.lec.spring.domain.Book;
 import com.lec.spring.domain.BookReviewInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 

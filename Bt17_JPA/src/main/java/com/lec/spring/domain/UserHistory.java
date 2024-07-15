@@ -40,14 +40,3 @@ public class UserHistory extends BaseEntity {
 //    @LastModifiedDate
 //    private LocalDateTime updatedAt;
 }
-
-
-
-
-
-
-
-
-
-
-

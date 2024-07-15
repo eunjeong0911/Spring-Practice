@@ -23,7 +23,7 @@ public class UserEntityListener {
     @PostUpdate
     @PostPersist
     public void addUserHistory(Object o){
-        System.out.println(">>> UserEntityListener#addUserHistory()");
+        System.out.println(">> UserEntityListener#addUserHistory()");
 
         // 스프링 bean 객체 주입 받기
         UserHistoryRepository userHistoryRepository = BeanUtils.getBean(UserHistoryRepository.class);
@@ -31,7 +31,7 @@ public class UserEntityListener {
         User user = (User)o;
         // UserHistory 에 UPDATE 될 User 정보를 담아서 저장 (INSERT)
         UserHistory userHistory = new UserHistory();
-        //userHistory.setUserId(user.getId());
+//        userHistory.setUserId(user.getId());
         userHistory.setName(user.getName());
         userHistory.setEmail(user.getEmail());
         userHistory.setUser(user);
@@ -41,23 +41,3 @@ public class UserEntityListener {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

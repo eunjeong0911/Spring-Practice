@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTest {
 
     @Test
-    void test(){
+    void test() {
         User user = new User();
         user.setEmail("martin@gmail.com");
         user.setName("martin");
@@ -19,15 +19,3 @@ class UserTest {
         System.out.println(">>>" + user.toString());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

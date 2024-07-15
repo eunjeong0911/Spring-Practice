@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-@EnableJpaAuditing	//스프링에서 제공하는 기본 Entity Listener 사용하기 위해
+@EnableJpaAuditing   // 스프링에서 제공하는 기본 Entity Listener 사용하기 위해
 public class Bt17JpaApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Bt17JpaApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Bt17JpaApplication.class, args);
+    }
 
 }

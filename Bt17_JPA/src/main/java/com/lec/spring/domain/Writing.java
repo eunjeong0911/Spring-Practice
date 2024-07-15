@@ -1,11 +1,11 @@
 package com.lec.spring.domain;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.transaction.annotation.Transactional;
 
 @Data
 @NoArgsConstructor
@@ -18,12 +18,13 @@ public class Writing extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-    //writing:book = N:1
+    // Writing: Book = N:1
     @ManyToOne
     private Book book;
 
-    //Writing: Author = n:1
+    // Writing: Author = N:1
     @ManyToOne
     private Author author;
+
+
 }
