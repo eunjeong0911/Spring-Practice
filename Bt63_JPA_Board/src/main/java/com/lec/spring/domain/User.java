@@ -15,12 +15,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
-@Entity(name = "t8_user")
+@ToString(callSuper = true) //부모클래스의 'ToString' 메서드 호출
+@EqualsAndHashCode(callSuper = true) //부모클래스의 'Equals' 와 'hashCode' 호출
+@Entity(name = "t8_user")   //데이터베이스 테이블 이름 지정
 public class User extends BaseEntity{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)     //기본 키의 값 자동 생성
     private Long id;
 
     @Column(unique = true, nullable = false)
@@ -40,12 +40,12 @@ public class User extends BaseEntity{
     private String email;   // 이메일
 
     //fetch 기본값
-    //OneToMany, @ManyToOne -> FetchType.Lazy
-    //@ManyToOne, @OneToOne -> FetchType.Eager
+    //OneToMany, @ManyToOne -> FetchType.Lazy - 지연로딩
+    //@ManyToOne, @OneToOne -> FetchType.Eager - 즉시로딩
 
     @ManyToMany(fetch = FetchType.EAGER) //user를 불러올때 권한같이불러오기위해
     @ToString.Exclude
-    @Builder.Default
+    @Builder.Default    //Builder 패턴으로 객체를 생성할때 기본 값을 설정
     @JsonIgnore
     private List<Authority> authorities = new ArrayList<>();
 

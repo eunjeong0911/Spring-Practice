@@ -32,11 +32,11 @@ public class Post extends BaseEntity{
     private String content; // 내용
 
     @ColumnDefault(value = "0")
-    @Column(insertable = false)
+    @Column(insertable = false) //DB에 직접 삽입하지 않고 자동으로 설정되거나 생성되는 경우에 사용
     private Long viewCnt; // 조회수
 
     //Post:User = N:1
-    @ManyToOne(optional = false) //작성한 글에는 반드시 작성자가 있ㅇㅓ야됨 작성자가 외래키일 수 없음
+    @ManyToOne(optional = false) //작성한 글에는 반드시 작성자가 있어야됨 작성자가 외래키일 수 없음
     // optional = false : user_id bigint not null
     //  이게 없으면 Post 의 find..동작시  Post 와 User 사이에 left outer join 발생
     @ToString.Exclude
